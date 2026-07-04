@@ -269,12 +269,12 @@
 
 .ctaTitle {
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-  color: var(--text-title);
+  color: #ffffff;
   margin: 1rem 0 1.2rem;
 }
 
 .ctaText {
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 2rem;
   font-size: 1.05rem;
 }

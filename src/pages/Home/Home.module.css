@@ -529,12 +529,12 @@
 .ctaTitle {
   font-size: clamp(2rem, 4vw, 3rem);
   margin: 1rem 0 1.2rem;
-  color: var(--text-title);
+  color: #ffffff;
 }
 
 .ctaSubtitle {
   font-size: 1.1rem;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 2.5rem;
   line-height: 1.75;
 }

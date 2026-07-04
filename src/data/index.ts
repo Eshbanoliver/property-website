@@ -19,18 +19,18 @@ export const stats: Stat[] = [
 
 // ── Services ───────────────────────────────────────────────
 export const services: Service[] = [
-  { id: 'sv1', icon: '🏠', title: 'Residential Properties', description: 'Find your perfect home from our wide range of residential options in prime locations across Udaipur.', color: '#6C63FF' },
-  { id: 'sv2', icon: '🏢', title: 'Commercial Properties', description: 'Premium office spaces and commercial units to grow your business in strategic locations.', color: '#FF6584' },
-  { id: 'sv3', icon: '🏰', title: 'Luxury Villas', description: 'Exquisite luxury villas with world-class amenities for the most discerning buyers.', color: '#FFD700' },
-  { id: 'sv4', icon: '🏗️', title: 'Apartments', description: 'Modern apartments with contemporary design, security, and all necessary facilities.', color: '#43E97B' },
-  { id: 'sv5', icon: '🌿', title: 'Farm Houses', description: 'Serene farm houses away from city noise, perfect for weekend retreats and eco-living.', color: '#38F9D7' },
-  { id: 'sv6', icon: '🔑', title: 'Rental Properties', description: 'Curated rental listings for residential and commercial needs at competitive prices.', color: '#F093FB' },
-  { id: 'sv7', icon: '📈', title: 'Investment Properties', description: 'High-yield investment properties with excellent ROI potential in growing areas.', color: '#4FACFE' },
-  { id: 'sv8', icon: '🌍', title: 'Plots & Land', description: 'Strategic plots and land parcels for construction or long-term investment purposes.', color: '#43E97B' },
-  { id: 'sv9', icon: '🛒', title: 'Property Buying Assistance', description: 'Expert guidance through the entire property buying journey from search to possession.', color: '#FA709A' },
-  { id: 'sv10', icon: '🏷️', title: 'Property Selling Assistance', description: 'Maximize your property value with our professional selling and marketing support.', color: '#667EEA' },
-  { id: 'sv11', icon: '💼', title: 'Property Consultation', description: 'Expert real estate consultation to help you make informed and profitable decisions.', color: '#F7971E' },
-  { id: 'sv12', icon: '📋', title: 'Documentation Support', description: 'Complete legal and documentation assistance to ensure smooth and secure transactions.', color: '#11998E' },
+  { id: 'sv1', image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&q=80&w=800', icon: '🏠', title: 'Residential Properties', description: 'Find your perfect home from our wide range of residential options in prime locations across Udaipur.', color: '#6C63FF' },
+  { id: 'sv2', image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800', icon: '🏢', title: 'Commercial Properties', description: 'Premium office spaces and commercial units to grow your business in strategic locations.', color: '#FF6584' },
+  { id: 'sv3', image: 'https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&q=80&w=800', icon: '🏰', title: 'Luxury Villas', description: 'Exquisite luxury villas with world-class amenities for the most discerning buyers.', color: '#FFD700' },
+  { id: 'sv4', image: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&q=80&w=800', icon: '🏗️', title: 'Apartments', description: 'Modern apartments with contemporary design, security, and all necessary facilities.', color: '#43E97B' },
+  { id: 'sv5', image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=800', icon: '🌿', title: 'Farm Houses', description: 'Serene farm houses away from city noise, perfect for weekend retreats and eco-living.', color: '#38F9D7' },
+  { id: 'sv6', image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800', icon: '🔑', title: 'Rental Properties', description: 'Curated rental listings for residential and commercial needs at competitive prices.', color: '#F093FB' },
+  { id: 'sv7', image: 'https://images.unsplash.com/photo-1460472178825-e5240623afd5?auto=format&fit=crop&q=80&w=800', icon: '📈', title: 'Investment Properties', description: 'High-yield investment properties with excellent ROI potential in growing areas.', color: '#4FACFE' },
+  { id: 'sv8', image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=800', icon: '🌍', title: 'Plots & Land', description: 'Strategic plots and land parcels for construction or long-term investment purposes.', color: '#43E97B' },
+  { id: 'sv9', image: 'https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?auto=format&fit=crop&q=80&w=800', icon: '🛒', title: 'Property Buying Assistance', description: 'Expert guidance through the entire property buying journey from search to possession.', color: '#FA709A' },
+  { id: 'sv10', image: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&q=80&w=800', icon: '🏷️', title: 'Property Selling Assistance', description: 'Maximize your property value with our professional selling and marketing support.', color: '#667EEA' },
+  { id: 'sv11', image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32b7?auto=format&fit=crop&q=80&w=800', icon: '💼', title: 'Property Consultation', description: 'Expert real estate consultation to help you make informed and profitable decisions.', color: '#F7971E' },
+  { id: 'sv12', image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=800', icon: '📋', title: 'Documentation Support', description: 'Complete legal and documentation assistance to ensure smooth and secure transactions.', color: '#11998E' },
 ];
 
 // ── Testimonials ───────────────────────────────────────────

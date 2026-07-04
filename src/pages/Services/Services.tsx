@@ -65,17 +65,17 @@ export function Services() {
             {services.map((service, i) => (
               <ScrollReveal key={service.id} delay={i * 0.06}>
                 <article className={`glass-card ${styles.serviceCard}`}>
-                  <div className={styles.serviceIconWrap} style={{ '--svc-color': service.color } as React.CSSProperties}>
-                    <span className={styles.serviceEmoji}>{service.icon}</span>
-                  </div>
                   <h2 className={styles.serviceTitle}>{service.title}</h2>
+                  <div className={styles.serviceImageWrap}>
+                    <img src={service.image} alt={service.title} className={styles.serviceImage} />
+                  </div>
                   <p className={styles.serviceDesc}>{service.description}</p>
                   <Link
                     to="/contact"
                     className={styles.serviceLink}
-                    aria-label={`Learn more about ${service.title}`}
+                    aria-label={`Discover more about ${service.title}`}
                   >
-                    Learn More
+                    Discover more
                     <ArrowRight size={16} />
                   </Link>
                 </article>

@@ -4,6 +4,7 @@
 
 export interface Service {
   id: string;
+  image: string;
   icon: string;
   title: string;
   description: string;

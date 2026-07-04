@@ -96,73 +96,75 @@ export function Header() {
       {/* Mobile Menu */}
       <AnimatePresence>
         {menuOpen && (
-          <>
-            <motion.div
-              className={styles.mobileOverlay}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setMenuOpen(false)}
-            />
-            <motion.div
-              className={styles.mobileMenu}
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            >
-              <div className={styles.mobileMenuHeader}>
-                <span className={styles.logoText}>
-                  Property<span className={styles.logoAccent}>Dealer</span>
-                </span>
-                <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-                  <button
-                    className={styles.themeToggleMobile}
-                    onClick={toggleTheme}
-                    aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
-                  >
-                    {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
-                  </button>
-                  <button onClick={() => setMenuOpen(false)} aria-label="Close menu">
-                    <X size={24} />
-                  </button>
-                </div>
-              </div>
-
-              <ul className={styles.mobileNavLinks} role="list">
-                {navLinks.map((link, i) => (
-                  <motion.li
-                    key={link.path}
-                    initial={{ x: 50, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ delay: i * 0.07 + 0.1 }}
-                  >
-                    <NavLink
-                      to={link.path}
-                      end={link.path === '/'}
-                      className={({ isActive }) =>
-                        `${styles.mobileNavLink} ${isActive ? styles.active : ''}`
-                      }
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      {link.label}
-                    </NavLink>
-                  </motion.li>
-                ))}
-              </ul>
-
-              <div className={styles.mobileMenuFooter}>
-                <a
-                  href="tel:+917894561237"
-                  className={`btn btn-primary`}
-                  style={{ width: '100%', justifyContent: 'center' }}
+          <motion.div
+            key="mobile-overlay"
+            className={styles.mobileOverlay}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setMenuOpen(false)}
+          />
+        )}
+        {menuOpen && (
+          <motion.div
+            key="mobile-menu"
+            className={styles.mobileMenu}
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '100%' }}
+            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+          >
+            <div className={styles.mobileMenuHeader}>
+              <span className={styles.logoText}>
+                Property<span className={styles.logoAccent}>Dealer</span>
+              </span>
+              <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+                <button
+                  className={styles.themeToggleMobile}
+                  onClick={toggleTheme}
+                  aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
                 >
-                  <Phone size={16} />
-                  Call Now: +91 7894561237
-                </a>
+                  {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+                </button>
+                <button onClick={() => setMenuOpen(false)} aria-label="Close menu">
+                  <X size={24} />
+                </button>
               </div>
-            </motion.div>
-          </>
+            </div>
+
+            <ul className={styles.mobileNavLinks} role="list">
+              {navLinks.map((link, i) => (
+                <motion.li
+                  key={link.path}
+                  initial={{ x: 50, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: i * 0.07 + 0.1 }}
+                >
+                  <NavLink
+                    to={link.path}
+                    end={link.path === '/'}
+                    className={({ isActive }) =>
+                      `${styles.mobileNavLink} ${isActive ? styles.active : ''}`
+                    }
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {link.label}
+                  </NavLink>
+                </motion.li>
+              ))}
+            </ul>
+
+            <div className={styles.mobileMenuFooter}>
+              <a
+                href="tel:+917894561237"
+                className={`btn btn-primary`}
+                style={{ width: '100%', justifyContent: 'center' }}
+              >
+                <Phone size={16} />
+                Call Now: +91 7894561237
+              </a>
+            </div>
+          </motion.div>
         )}
       </AnimatePresence>
     </header>

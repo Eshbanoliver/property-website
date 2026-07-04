@@ -145,16 +145,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className={styles.bottomBar}>
           <p className={styles.copyright}>
-            ©️ Copyright 2026 | Property Dealer | All Rights Reserved | Powered by{' '}
-            <a
-              href="https://www.futurexdigitalmarketing.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.poweredLink}
-            >
-              Future X Digital Marketing
-              <ExternalLink size={12} style={{ display: 'inline', marginLeft: '3px' }} />
-            </a>
+            ©️ Copyright 2026 | Property Dealer | All Rights Reserved
           </p>
           <div className={styles.bottomLinks}>
             <Link to="/contact" className={styles.bottomLink}>Privacy Policy</Link>
