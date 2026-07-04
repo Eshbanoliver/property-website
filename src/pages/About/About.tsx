@@ -52,8 +52,8 @@ export function About() {
               <div className={styles.introImage}>
                 <div className={styles.imgBox}>
                   <span style={{ fontSize: '5rem', display: 'block', marginBottom: '1rem' }}>🏙️</span>
-                  <h3 style={{ color: 'white', fontFamily: 'var(--font-display)' }}>Property Dealer</h3>
-                  <p style={{ color: 'rgba(232,232,240,0.6)', fontSize: '0.9rem' }}>Udaipur, Rajasthan</p>
+                  <h3 style={{ color: 'var(--text-title)', fontFamily: 'var(--font-display)' }}>Property Dealer</h3>
+                  <p style={{ color: 'var(--text-subtitle)', fontSize: '0.9rem' }}>Udaipur, Rajasthan</p>
                 </div>
                 <div className={styles.introStats}>
                   {[
@@ -124,7 +124,7 @@ export function About() {
                   <div className={styles.timelineDot} />
                   <div className={`glass-card ${styles.timelineContent}`}>
                     <h3 style={{ marginBottom: '0.4rem', fontSize: '1.1rem' }}>{item.title}</h3>
-                    <p style={{ fontSize: '0.9rem', color: 'rgba(232,232,240,0.65)', position: 'relative', zIndex: 1 }}>{item.desc}</p>
+                    <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', position: 'relative', zIndex: 1 }}>{item.desc}</p>
                   </div>
                 </div>
               </ScrollReveal>

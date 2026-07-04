@@ -1,15 +1,17 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Phone, Menu, X, Home } from 'lucide-react';
+import { Phone, Menu, X, Home, Sun, Moon } from 'lucide-react';
 import { navLinks } from '../data';
 import { useScrollY } from '../hooks';
+import { useTheme } from './ThemeProvider';
 import styles from './Header.module.css';
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const scrollY = useScrollY();
   const isScrolled = scrollY > 60;
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
@@ -48,6 +50,15 @@ export function Header() {
                 </li>
               ))}
             </ul>
+
+            {/* Theme Toggle */}
+            <button
+              className={styles.themeToggle}
+              onClick={toggleTheme}
+              aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+            >
+              {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+            </button>
 
             {/* CTA Button */}
             <a
@@ -104,9 +115,18 @@ export function Header() {
                 <span className={styles.logoText}>
                   Property<span className={styles.logoAccent}>Dealer</span>
                 </span>
-                <button onClick={() => setMenuOpen(false)} aria-label="Close menu">
-                  <X size={24} />
-                </button>
+                <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+                  <button
+                    className={styles.themeToggleMobile}
+                    onClick={toggleTheme}
+                    aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+                  >
+                    {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+                  </button>
+                  <button onClick={() => setMenuOpen(false)} aria-label="Close menu">
+                    <X size={24} />
+                  </button>
+                </div>
               </div>
 
               <ul className={styles.mobileNavLinks} role="list">

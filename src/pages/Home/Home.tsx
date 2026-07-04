@@ -289,10 +289,10 @@ export function Home() {
                   <div className="icon-box">
                     <span style={{ fontSize: '1.8rem' }}>{service.icon}</span>
                   </div>
-                  <h3 style={{ fontSize: '1.1rem', marginBottom: '0.6rem', color: 'white' }}>
+                  <h3 style={{ fontSize: '1.1rem', marginBottom: '0.6rem', color: 'var(--text-title)' }}>
                     {service.title}
                   </h3>
-                  <p style={{ fontSize: '0.9rem', color: 'rgba(232,232,240,0.65)', position: 'relative', zIndex: 1 }}>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', position: 'relative', zIndex: 1 }}>
                     {service.description}
                   </p>
                 </article>
@@ -467,8 +467,8 @@ export function Home() {
                   <div className={styles.testimonialHeader}>
                     <div className={styles.testimonialAvatar}>{t.avatar}</div>
                     <div>
-                      <strong style={{ color: 'white', display: 'block' }}>{t.name}</strong>
-                      <span style={{ fontSize: '0.8rem', color: 'rgba(232,232,240,0.55)' }}>{t.location}</span>
+                      <strong style={{ color: 'var(--text-title)', display: 'block' }}>{t.name}</strong>
+                      <span style={{ fontSize: '0.8rem', color: 'var(--text-subtitle)' }}>{t.location}</span>
                     </div>
                     <div className={styles.testimonialBadge}>{t.service}</div>
                   </div>
@@ -477,7 +477,7 @@ export function Home() {
                       <Star key={i} size={15} fill="#FFD700" color="#FFD700" />
                     ))}
                   </div>
-                  <p style={{ fontSize: '0.92rem', lineHeight: 1.7, color: 'rgba(232,232,240,0.8)', position: 'relative', zIndex: 1 }}>
+                  <p style={{ fontSize: '0.92rem', lineHeight: 1.7, color: 'var(--text-muted)', position: 'relative', zIndex: 1 }}>
                     "{t.review}"
                   </p>
                 </div>
@@ -530,7 +530,7 @@ export function Home() {
           </div>
 
           <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
-            <p style={{ marginBottom: '1rem', color: 'rgba(232,232,240,0.6)' }}>
+            <p style={{ marginBottom: '1rem', color: 'var(--text-subtitle)' }}>
               Still have questions? We're here to help!
             </p>
             <Link to="/contact" className="btn btn-primary">

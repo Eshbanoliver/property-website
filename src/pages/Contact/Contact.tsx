@@ -239,7 +239,7 @@ export function Contact() {
                       <div className={styles.infoIcon}><Mail size={18} /></div>
                       <div>
                         <span className={styles.infoLabel}>Email</span>
-                        <span className={styles.infoValue} style={{ color: 'rgba(232,232,240,0.45)' }}>Coming soon</span>
+                        <span className={styles.infoValue} style={{ color: 'var(--text-subtitle)', opacity: 0.7 }}>Coming soon</span>
                       </div>
                     </li>
                     <li className={styles.infoItem}>

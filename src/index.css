@@ -29,6 +29,12 @@
   --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   --glass-shadow-hover: 0 20px 60px rgba(108, 99, 255, 0.25);
 
+  /* Text Colors */
+  --text-main: #e8e8f0;
+  --text-muted: rgba(232, 232, 240, 0.8);
+  --text-title: #ffffff;
+  --text-subtitle: rgba(232, 232, 240, 0.65);
+
   /* Gradients */
   --gradient-primary: linear-gradient(135deg, #6C63FF 0%, #FF6584 100%);
   --gradient-hero: linear-gradient(135deg, #080818 0%, #1a0533 50%, #0d1a3a 100%);
@@ -89,6 +95,33 @@
   --z-floating: 500;
 }
 
+/* --- Light Theme Variables --- */
+[data-theme="light"] {
+  /* Background Colors */
+  --bg-dark: #F5F7FB;
+  --bg-deep: #E9EDF5;
+  --bg-card: rgba(255, 255, 255, 0.7);
+  --bg-card-hover: rgba(255, 255, 255, 0.95);
+
+  /* Glass Effects */
+  --glass-bg: rgba(255, 255, 255, 0.65);
+  --glass-bg-strong: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(108, 99, 255, 0.12);
+  --glass-border-hover: rgba(108, 99, 255, 0.35);
+  --glass-shadow: 0 8px 32px rgba(31, 38, 135, 0.05);
+  --glass-shadow-hover: 0 20px 60px rgba(108, 99, 255, 0.12);
+
+  /* Text Colors */
+  --text-main: #33334F;
+  --text-muted: rgba(51, 51, 79, 0.78);
+  --text-title: #0C0D1A;
+  --text-subtitle: rgba(51, 51, 79, 0.65);
+
+  /* Gradients overrides */
+  --gradient-hero: linear-gradient(135deg, #F3F6FC 0%, #DFE4F2 50%, #ECEFF6 100%);
+  --gradient-card: linear-gradient(135deg, rgba(108, 99, 255, 0.08) 0%, rgba(255, 101, 132, 0.04) 100%);
+}
+
 /* --- Global Reset --- */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -105,11 +138,12 @@ html {
 body {
   font-family: var(--font-body);
   background: var(--bg-dark);
-  color: #e8e8f0;
+  color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color var(--transition-base), color var(--transition-base);
 }
 
 /* --- Selection Color --- */
@@ -131,7 +165,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
   line-height: 1.2;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--text-title);
+  transition: color var(--transition-base);
 }
 
 h1 { font-size: clamp(2.5rem, 5vw, var(--text-7xl)); }
@@ -139,7 +174,7 @@ h2 { font-size: clamp(2rem, 4vw, var(--text-5xl)); }
 h3 { font-size: clamp(1.5rem, 3vw, var(--text-3xl)); }
 h4 { font-size: var(--text-xl); }
 
-p { color: rgba(232, 232, 240, 0.8); line-height: 1.75; }
+p { color: var(--text-muted); line-height: 1.75; transition: color var(--transition-base); }
 
 a {
   color: inherit;
@@ -274,7 +309,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .btn-outline {
   background: transparent;
-  color: white;
+  color: var(--text-title);
   border: 2px solid var(--glass-border-hover) !important;
 }
 
@@ -316,13 +351,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .section-title {
   font-size: clamp(2rem, 4vw, 3rem);
   font-family: var(--font-display);
-  color: white;
+  color: var(--text-title);
   margin-bottom: var(--space-4);
 }
 
 .section-subtitle {
   font-size: var(--text-lg);
-  color: rgba(232, 232, 240, 0.65);
+  color: var(--text-subtitle);
   max-width: 600px;
   margin: 0 auto var(--space-12);
   line-height: 1.75;
@@ -506,7 +541,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .form-label {
   font-size: var(--text-sm);
   font-weight: 600;
-  color: rgba(232, 232, 240, 0.8);
+  color: var(--text-muted);
   letter-spacing: 0.04em;
 }
 
@@ -515,10 +550,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .form-select {
   width: 100%;
   padding: 0.9rem 1.2rem;
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--bg-card);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-md);
-  color: white;
+  color: var(--text-title);
   font-family: var(--font-body);
   font-size: var(--text-base);
   transition: all var(--transition-base);
@@ -529,13 +564,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .form-textarea:focus,
 .form-select:focus {
   border-color: var(--primary);
-  background: rgba(108, 99, 255, 0.08);
+  background: var(--bg-card-hover);
   box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.15);
 }
 
 .form-input::placeholder,
 .form-textarea::placeholder {
-  color: rgba(232, 232, 240, 0.35);
+  color: var(--text-muted);
+  opacity: 0.5;
 }
 
 .form-textarea {

@@ -108,7 +108,7 @@ export function Services() {
                   <div className={styles.processStep}>{p.step}</div>
                   <div className={styles.processIcon}>{p.icon}</div>
                   <h3 className={styles.processTitle}>{p.title}</h3>
-                  <p style={{ fontSize: '0.9rem', color: 'rgba(232,232,240,0.65)', position: 'relative', zIndex: 1 }}>{p.desc}</p>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', position: 'relative', zIndex: 1 }}>{p.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
