@@ -1,0 +1,113 @@
+/* FloatingButtons.module.css */
+.leftButtons {
+  position: fixed;
+  left: 1.2rem;
+  bottom: 2rem;
+  z-index: var(--z-floating);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.scrollTop {
+  position: fixed;
+  right: 1.2rem;
+  bottom: 2rem;
+  z-index: var(--z-floating);
+}
+
+.fab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 54px;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: white;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  padding: 0 1.2rem 0 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.fab svg { flex-shrink: 0; }
+
+.fabLabel {
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  max-width: 100px;
+}
+
+/* WhatsApp */
+.whatsapp {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  animation: fabFloat 3s ease-in-out infinite;
+}
+
+.whatsapp:hover {
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+}
+
+/* Call */
+.call {
+  background: linear-gradient(135deg, #6C63FF, #FF6584);
+  box-shadow: 0 4px 20px rgba(108, 99, 255, 0.4);
+  animation: fabFloat 3s ease-in-out infinite 0.5s;
+}
+
+.call:hover {
+  box-shadow: 0 8px 30px rgba(108, 99, 255, 0.6);
+}
+
+/* Scroll Top */
+.scrollTop {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  justify-content: center;
+  border-radius: 14px;
+  background: var(--gradient-primary);
+  box-shadow: 0 4px 20px rgba(108,99,255,0.5);
+  animation: fabFloat 2.5s ease-in-out infinite 1s;
+}
+
+.scrollTop:hover {
+  box-shadow: 0 8px 30px rgba(108,99,255,0.7);
+}
+
+@keyframes fabFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Pulse rings */
+.whatsapp::before,
+.call::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: inherit;
+  animation: fabPulse 2.5s ease-out infinite;
+  opacity: 0;
+  z-index: -1;
+}
+
+.call::before { animation-delay: 0.5s; }
+
+@keyframes fabPulse {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+@media (max-width: 480px) {
+  .fab { height: 48px; }
+  .fabLabel { display: none; }
+  .fab { padding: 0 0.85rem; width: 48px; justify-content: center; }
+}

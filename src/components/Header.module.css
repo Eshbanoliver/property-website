@@ -1,0 +1,233 @@
+/* Header.module.css */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-sticky);
+  transition: all 0.4s ease;
+  padding: 0;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  backdrop-filter: blur(0px);
+  transition: all 0.4s ease;
+}
+
+.header.scrolled::before {
+  background: rgba(8, 8, 24, 0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06), 0 4px 30px rgba(0,0,0,0.5);
+}
+
+.nav { position: relative; z-index: 1; }
+
+.navInner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.1rem 0;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logoIcon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6C63FF, #FF6584);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 15px rgba(108,99,255,0.4);
+}
+
+.logoText {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.02em;
+}
+
+.logoAccent {
+  color: var(--primary-light);
+  margin-left: 1px;
+}
+
+/* Desktop Nav Links */
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-left: auto;
+  list-style: none;
+}
+
+.navLink {
+  position: relative;
+  padding: 0.5rem 0.9rem;
+  color: rgba(232, 232, 240, 0.8);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  letter-spacing: 0.01em;
+}
+
+.navLink:hover {
+  color: white;
+  background: rgba(255,255,255,0.07);
+}
+
+.navLink.active {
+  color: var(--primary-light);
+  background: rgba(108, 99, 255, 0.12);
+}
+
+.navLinkUnderline {
+  display: none;
+}
+
+/* CTA Button */
+.ctaBtn {
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+  font-size: 0.875rem;
+  padding: 0.65rem 1.4rem;
+}
+
+/* Mobile Toggle */
+.menuToggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-left: auto;
+}
+
+.menuToggle:hover {
+  background: var(--glass-bg-strong);
+  border-color: var(--primary);
+}
+
+/* Mobile Overlay */
+.mobileOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 998;
+  backdrop-filter: blur(4px);
+}
+
+/* Mobile Menu */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(340px, 90vw);
+  height: 100vh;
+  background: rgba(13, 13, 43, 0.97);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border-left: 1px solid var(--glass-border);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.mobileMenuHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--glass-border);
+  color: white;
+}
+
+.mobileMenuHeader button {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  color: white;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mobileMenuHeader button:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.mobileNavLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+  list-style: none;
+}
+
+.mobileNavLink {
+  display: block;
+  padding: 1rem 1.2rem;
+  color: rgba(232, 232, 240, 0.8);
+  font-size: 1.05rem;
+  font-weight: 500;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  border: 1px solid transparent;
+}
+
+.mobileNavLink:hover {
+  color: white;
+  background: var(--glass-bg);
+  border-color: var(--glass-border);
+}
+
+.mobileNavLink.active {
+  color: var(--primary-light);
+  background: rgba(108, 99, 255, 0.15);
+  border-color: rgba(108, 99, 255, 0.3);
+}
+
+.mobileMenuFooter {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--glass-border);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .navLinks { display: none; }
+  .ctaBtn { display: none; }
+  .menuToggle { display: flex; }
+}

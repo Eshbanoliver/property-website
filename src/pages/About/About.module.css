@@ -1,0 +1,304 @@
+/* About.module.css */
+.hero {
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--gradient-hero);
+  padding: 8rem 0 5rem;
+  text-align: center;
+}
+
+.heroBlob1 {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(108,99,255,0.22), transparent 70%);
+  top: -150px;
+  left: -100px;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.heroBlob2 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,101,132,0.18), transparent 70%);
+  bottom: -100px;
+  right: -80px;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.heroContent {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.heroTitle {
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  margin: 1rem 0 1.2rem;
+  color: white;
+}
+
+.heroSubtitle {
+  font-size: 1.1rem;
+  color: rgba(232,232,240,0.75);
+  margin-bottom: 2rem;
+  line-height: 1.75;
+}
+
+.heroBtns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Intro Grid */
+.introGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.introImage { position: relative; }
+
+.imgBox {
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 420px;
+  background: linear-gradient(135deg, rgba(108,99,255,0.2), rgba(255,101,132,0.1));
+  border: 1px solid var(--glass-border);
+  border-radius: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.introStats {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: rgba(13,13,43,0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.introStat {
+  text-align: center;
+}
+
+.introStat strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 0.2rem;
+}
+
+.introStat span {
+  font-size: 0.78rem;
+  color: rgba(232,232,240,0.6);
+}
+
+/* Timeline */
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 100px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--primary), var(--secondary));
+  opacity: 0.3;
+}
+
+.timelineItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.timelineYear {
+  width: 80px;
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-light);
+  padding-top: 1.2rem;
+  text-align: right;
+}
+
+.timelineDot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  flex-shrink: 0;
+  margin-top: 1.5rem;
+  box-shadow: 0 0 12px rgba(108,99,255,0.5);
+}
+
+.timelineContent { flex: 1; padding: 1.2rem 1.5rem; }
+
+/* Mission/Vision */
+.purposeCard {
+  padding: 2.5rem;
+  height: 100%;
+}
+
+.visionCard {
+  background: rgba(67,233,123,0.04);
+}
+
+.purposeIcon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.purposeList {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.purposeList li {
+  font-size: 0.9rem;
+  color: rgba(232,232,240,0.7);
+}
+
+/* Values */
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.valueCard { text-align: center; padding: 2rem 1.5rem; }
+
+.valueIcon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+/* Trust */
+.trustGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+.trustCard { text-align: center; padding: 1.8rem 1.2rem; }
+
+.trustIcon {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 0.7rem;
+}
+
+.trustCard h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-body);
+}
+
+.trustCard p {
+  font-size: 0.82rem;
+  color: rgba(232,232,240,0.6);
+}
+
+/* CTA */
+.ctaSection {
+  background: linear-gradient(135deg, #0D0B2A, #1a0533, #0D1A3A);
+  padding: 6rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--glass-border);
+}
+
+.ctaBlob {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(108,99,255,0.18), transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.ctaContent { max-width: 600px; margin: 0 auto; }
+
+.ctaTitle {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  color: white;
+  margin: 1rem 0 1.2rem;
+}
+
+.ctaText {
+  color: rgba(232,232,240,0.7);
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.ctaBtns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+  .introGrid { grid-template-columns: 1fr; }
+  .valuesGrid { grid-template-columns: repeat(2, 1fr); }
+  .trustGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .timeline::before { left: 60px; }
+  .timelineYear { width: 50px; font-size: 0.85rem; }
+  .trustGrid { grid-template-columns: repeat(2, 1fr); }
+  .valuesGrid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .trustGrid { grid-template-columns: 1fr; }
+}
