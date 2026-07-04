@@ -86,7 +86,7 @@ export function Services() {
       </section>
 
       {/* ── Process Section ── */}
-      <section className="section" style={{ background: 'rgba(108,99,255,0.03)' }} aria-label="Our process">
+      <section className="section" style={{ background: 'var(--bg-card)' }} aria-label="Our process">
         <div className="container">
           <ScrollReveal>
             <header className="section-header">

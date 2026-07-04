@@ -164,7 +164,7 @@ export function Home() {
                 </div>
                 <div className={styles.heroCardFooter}>
                   <div className={styles.heroRating}>
-                    {[1,2,3,4,5].map(i => <Star key={i} size={14} fill="#FFD700" color="#FFD700" />)}
+                    {[1,2,3,4,5].map(i => <Star key={i} size={14} fill="var(--gold)" color="var(--gold)" />)}
                     <span>4.9/5 — 250+ Reviews</span>
                   </div>
                 </div>
@@ -266,7 +266,7 @@ export function Home() {
       {/* ══════════════════════════════════════════
           SERVICES (Preview 6)
       ══════════════════════════════════════════ */}
-      <section className="section" style={{ background: 'rgba(108,99,255,0.03)' }} aria-label="Our services">
+      <section className="section" style={{ background: 'var(--bg-card)' }} aria-label="Our services">
         <div className="container">
           <ScrollReveal>
             <header className="section-header">
@@ -360,7 +360,7 @@ export function Home() {
       {/* ══════════════════════════════════════════
           CORE VALUES
       ══════════════════════════════════════════ */}
-      <section className="section" style={{ background: 'rgba(255,101,132,0.02)' }} aria-label="Core values">
+      <section className="section" style={{ background: 'var(--bg-card)' }} aria-label="Core values">
         <div className="container">
           <ScrollReveal>
             <header className="section-header">
@@ -474,7 +474,7 @@ export function Home() {
                   </div>
                   <div className="stars" style={{ marginBottom: '0.75rem' }}>
                     {Array.from({ length: t.rating }).map((_, i) => (
-                      <Star key={i} size={15} fill="#FFD700" color="#FFD700" />
+                      <Star key={i} size={15} fill="var(--gold)" color="var(--gold)" />
                     ))}
                   </div>
                   <p style={{ fontSize: '0.92rem', lineHeight: 1.7, color: 'var(--text-muted)', position: 'relative', zIndex: 1 }}>
@@ -511,7 +511,7 @@ export function Home() {
       {/* ══════════════════════════════════════════
           FAQ
       ══════════════════════════════════════════ */}
-      <section className="section" style={{ background: 'rgba(108,99,255,0.03)' }} aria-label="Frequently asked questions">
+      <section className="section" style={{ background: 'var(--bg-card)' }} aria-label="Frequently asked questions">
         <div className="container">
           <ScrollReveal>
             <header className="section-header">

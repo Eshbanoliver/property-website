@@ -45,7 +45,7 @@ export function Testimonials() {
                 <span className={styles.ratingNumber}>{avgRating}</span>
                 <div className="stars" style={{ gap: '4px' }}>
                   {[1,2,3,4,5].map(i => (
-                    <Star key={i} size={28} fill="#FFD700" color="#FFD700" />
+                    <Star key={i} size={28} fill="var(--gold)" color="var(--gold)" />
                   ))}
                 </div>
                 <span className={styles.ratingLabel}>Average Rating</span>
@@ -106,7 +106,7 @@ export function Testimonials() {
                     <div className={styles.reviewMeta}>
                       <div className="stars">
                         {Array.from({ length: t.rating }).map((_, si) => (
-                          <Star key={si} size={14} fill="#FFD700" color="#FFD700" />
+                          <Star key={si} size={14} fill="var(--gold)" color="var(--gold)" />
                         ))}
                       </div>
                       <span className={styles.serviceTag}>{t.service}</span>
@@ -120,7 +120,7 @@ export function Testimonials() {
       </section>
 
       {/* ── Video Testimonial Placeholder ── */}
-      <section className="section" style={{ background: 'rgba(108,99,255,0.03)' }} aria-label="Share your experience">
+      <section className="section" style={{ background: 'var(--bg-card)' }} aria-label="Share your experience">
         <div className="container">
           <ScrollReveal>
             <div className={styles.shareSection}>

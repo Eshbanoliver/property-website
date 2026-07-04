@@ -101,7 +101,7 @@ export function About() {
       </section>
 
       {/* ── Our Story ── */}
-      <section className="section" style={{ background: 'rgba(108,99,255,0.03)' }} aria-label="Our story">
+      <section className="section" style={{ background: 'var(--bg-card)' }} aria-label="Our story">
         <div className="container">
           <ScrollReveal>
             <header className="section-header">
@@ -184,7 +184,7 @@ export function About() {
       </section>
 
       {/* ── Core Values ── */}
-      <section className="section" style={{ background: 'rgba(255,101,132,0.02)' }} aria-label="Core values">
+      <section className="section" style={{ background: 'var(--bg-card)' }} aria-label="Core values">
         <div className="container">
           <ScrollReveal>
             <header className="section-header">
